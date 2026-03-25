@@ -1,21 +1,6 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, DM_Sans } from 'next/font/google';
-import { siteConfig } from '@/data/site-config';
-import { Header } from '@/components/layout/Header';
-import { MainWrapper } from '@/components/layout/MainWrapper';
-import { Footer } from '@/components/layout/Footer';
-import { MobileBottomBar } from '@/components/layout/MobileBottomBar';
-import { JsonLd } from '@/components/seo/JsonLd';
-import { localBusinessSchema } from '@/lib/schema';
+import { DM_Sans } from 'next/font/google';
 import '@/styles/globals.css';
-
-const playfairDisplay = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-display',
-  display: 'swap',
-});
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -25,50 +10,16 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: `${siteConfig.name} | Pool, Landscape & Concrete Construction in Utah`,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  keywords: [
-    'pool construction Utah',
-    'swimming pool builders Utah',
-    'custom pool builder Saratoga Springs',
-    'pool installation Utah County',
-    'landscape construction Utah',
-    'concrete services Utah',
-    'outdoor living contractor Utah',
-    'pool builders Bountiful UT',
-    'inground pool Utah',
-    'Timberline Falls',
-  ],
-  alternates: { canonical: siteConfig.url },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: `${siteConfig.name} — Pool, Landscape & Concrete Construction in Utah` }],
-  },
-  twitter: { card: 'summary_large_image' },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
+  title: 'Timberline Falls | Maintenance',
+  description: 'We are currently making updates. The site will be back online shortly.',
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${dmSans.variable}`}>
-      <head>
-        <link rel="preconnect" href="https://assets.cdn.filesafe.space" />
-        <link rel="preconnect" href="https://storage.googleapis.com" />
-        <link rel="dns-prefetch" href="https://lirp.cdn-website.com" />
-        <JsonLd data={localBusinessSchema()} />
-      </head>
+    <html lang="en" className={dmSans.variable}>
       <body className="min-h-screen flex flex-col">
-        <Header />
-        <MainWrapper>{children}</MainWrapper>
-        <Footer />
-        <MobileBottomBar />
+        {children}
       </body>
     </html>
   );
