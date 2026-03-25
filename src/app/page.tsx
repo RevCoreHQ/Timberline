@@ -1,18 +1,25 @@
 export default function MaintenancePage() {
   return (
-    <main className="flex-1 flex items-center justify-center px-6">
-      <div className="text-center max-w-md">
-        <h1 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">
-          We&apos;re currently making updates to improve your experience.
-        </h1>
-        <p className="text-lg text-slate-600 mb-8">
-          The site will be back online shortly.
+    <main
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        backgroundColor: '#f5f5f5',
+        fontFamily: 'Arial, sans-serif',
+        padding: '20px',
+      }}
+    >
+      <div style={{ textAlign: 'center', maxWidth: '400px' }}>
+        <p style={{ fontSize: '14px', color: '#999', marginBottom: '20px' }}>
+          timberlinefallsut.com
         </p>
-        <p className="text-slate-500">
-          For inquiries, please contact us directly at{' '}
-          <a href="tel:+18015020306" className="text-slate-700 underline">(801) 502-0306</a>
-          {' '}or{' '}
-          <a href="mailto:info@timberlinefallsut.com" className="text-slate-700 underline">info@timberlinefallsut.com</a>
+        <h1 style={{ fontSize: '18px', color: '#333', fontWeight: 'normal', marginBottom: '10px' }}>
+          This site is currently unavailable.
+        </h1>
+        <p style={{ fontSize: '14px', color: '#777' }}>
+          For inquiries, contact (801) 502-0306
         </p>
       </div>
     </main>
