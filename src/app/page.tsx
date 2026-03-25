@@ -12,9 +12,6 @@ export default function MaintenancePage() {
       }}
     >
       <div style={{ textAlign: 'center', maxWidth: '400px' }}>
-        <p style={{ fontSize: '14px', color: '#999', marginBottom: '20px' }}>
-          timberlinefallsut.com
-        </p>
         <h1 style={{ fontSize: '18px', color: '#333', fontWeight: 'normal', marginBottom: '10px' }}>
           This site is currently unavailable.
         </h1>
