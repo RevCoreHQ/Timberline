@@ -12,12 +12,9 @@ export default function MaintenancePage() {
       }}
     >
       <div style={{ textAlign: 'center', maxWidth: '400px' }}>
-        <h1 style={{ fontSize: '18px', color: '#333', fontWeight: 'normal', marginBottom: '10px' }}>
+        <h1 style={{ fontSize: '18px', color: '#333', fontWeight: 'normal' }}>
           This site is currently unavailable.
         </h1>
-        <p style={{ fontSize: '14px', color: '#777' }}>
-          For inquiries, contact (801) 502-0306
-        </p>
       </div>
     </main>
   );
